@@ -13,23 +13,23 @@ for (var i = 0; i < 10; i++) {
 //Using let in a loop
 let k = 5;
 
-for (let k = 0; k < 10; k++) {
+for (let k = 0; k <= 10; k++) {
   console.log(k);
 }
 // The JavaScript for in statement loops through the properties of an Object:
 const person = { fname: "John", lname: "Doe", age: 25 };
 let text = "";
 for (let x in person) {
-  text += person[x];
+  text += person[x] + "<br>";
 }
-console.log(`text = ${text}`);
+console.log(`text = ${text} `);
 // The JavaScript for in statement can also loop over the properties of an Array:
 const numbers = [45, 4, 9, 16, 25];
 let txt = "";
 for (const x in numbers) {
-  txt += numbers[x];
+  txt += numbers[x] + ", ";
 }
-console.log(`txt = ${txt}`);
+console.log(`txt = ${txt} `);
 // The forEach() method calls a function (a callback function) once for each array element.
 const arr = [45, 4, 9, 16, 25];
 
@@ -37,7 +37,7 @@ let string = "";
 arr.forEach(myFunction);
 
 function myFunction(value, index, array) {
-  string += value;
+  string += `${value} \n`;
 }
 console.log(string);
 
@@ -45,7 +45,7 @@ const cars = ["BMW", "Volvo", "Mini"];
 
 let text1 = "";
 for (const x of cars) {
-  console.log(`Hihi: ${x}`);
+  console.log(`type: ${x} `);
   text1 += x;
 }
 console.log(`text1 = ${text1}`);
@@ -70,6 +70,16 @@ for(const random of ['a', 'b', 1, 2]  ) {
 
  // Second color is black
  console.log(colors[1]); // 'black'
-colors[2] = 'Hihi'
+colors[2] = 'Hihi' //thêm index 2 vào array colors
+console.log(colors); // array sau khi đc thêm index 2
 console.log(colors[2]);
 var colors = [1, 2]
+
+
+/*
+    for và for/in cho phép bạn truy cập vào index của mảng chứ không phải là phần tử
+    forEach() và for/of bạn có thể truy cập trực tiếp đến giá trị của phần tử,
+    forEach() cho phép bạn truy cập đến index của phần tử, for/of thì không.
+    sử dụng for/in là bad practice
+    sử dụng arrow function đối với forEach nếu không this sẽ không tồn tại.
+*/
