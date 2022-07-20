@@ -1,0 +1,22 @@
+.title{
+    color:blue;
+  }
+.background{
+    background: floralwhite;
+}
+.changeBox{
+  height: 200px;
+  width: 200px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+div{
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+}
