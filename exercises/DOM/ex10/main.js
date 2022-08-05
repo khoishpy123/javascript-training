@@ -20,5 +20,8 @@ if (name==null || name==""){
     alert("rePassword must be same as password!");
     return false;
   }
+}
 
+function resetdata(){
+  document.myform.reset();
 }
