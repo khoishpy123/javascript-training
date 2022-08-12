@@ -1,4 +1,4 @@
-var XMLHttpRequest = require('xhr2');
+// var XMLHttpRequest = require('xhr2');
 const randomNumber = new Promise((resolve, reject) => {
   const url = 'https://www.random.org/integers/?num=1&min=1&max=10&col=1&base=10&format=plain&rnd=new';
   let request = new XMLHttpRequest();
@@ -28,20 +28,38 @@ randomNumber
 .catch((err) => {
   console.log("Error: ", err.message);
 })
-// Callback hell
-function doTasks(){
-	setTimeout(function(){
-		console.log('task 1');
-		setTimeout(function(){
-			console.log('task 2');
-			setTimeout(function(){
-				console.log('task 3');
-				setTimeout(function(){
-					console.log('task 4');
-				}, 200)
-			}, 300)
-		}, 400)
-	}, 500)
-}
+// // Callback hell
+// function doTasks(){
+// 	setTimeout(function(){
+// 		console.log('task 1');
+// 		setTimeout(function(){
+// 			console.log('task 2');
+// 			setTimeout(function(){
+// 				console.log('task 3');
+// 				setTimeout(function(){
+// 					console.log('task 4');
+// 				}, 200)
+// 			}, 300)
+// 		}, 400)
+// 	}, 500)
+// }
 
-doTasks()
+// doTasks()
+
+// const promise = new Promise(
+//    function(resolve, reject){
+//       resolve()
+//       reject()
+//    }
+// );
+
+// promise
+//    .then(function(){
+//       console.log('success!')
+//    })
+//    .catch(function(){
+//       console.log(`error!`)
+//    })
+//    .finally(() => {
+//       console.log('finished!')
+//    })
