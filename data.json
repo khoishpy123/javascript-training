@@ -7,6 +7,14 @@
       "phone": "+123",
       "salary": "100",
       "id": 1
+    },
+    {
+      "name": "Tuan",
+      "surname": "Van",
+      "email": "tuan@gmail.com",
+      "phone": "+123",
+      "salary": "50",
+      "id": 1
     }
   ]
 }
