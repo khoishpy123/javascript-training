@@ -6,7 +6,9 @@
   "scripts": {
     "server": "json-server --watch data.json",
     "start": "concurrently --kill-others \"npm run server\" \"npm run dev\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+    "fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'"
   },
   "repository": {
     "type": "git",
@@ -19,9 +21,11 @@
   },
   "homepage": "https://github.com/khoishpy123/javascript-training#readme",
   "devDependencies": {
-    "eslint": "^8.22.0",
-    "eslint-config-google": "^0.14.0",
     "concurrently": "^7.3.0",
+    "eslint": "^8.22.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.2",
     "json-server": "^0.17.0"
   }
 }
