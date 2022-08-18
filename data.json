@@ -1,13 +1,19 @@
 {
   "employee": [
     {
-      "name": "khoi",
-      "email": "0327074715",
-      "id": 1
+      "id": 1,
+      "name": "Khoi",
+      "surname": "Minh",
+      "email": "minkhoi@gmail.com",
+      "phone": "+12345678901",
+      "salary": "100"
     },
     {
-      "name": "Lê Đức Toàn",
-      "email": "minkhoi@adwd",
+      "name": "Tuan",
+      "surname": "Le",
+      "email": "tuanle@gmail.com",
+      "phone": "032546156",
+      "salary": "120",
       "id": 2
     }
   ]
