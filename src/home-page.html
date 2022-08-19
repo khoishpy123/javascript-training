@@ -33,6 +33,55 @@
       </thead>
     </table>
   </main>
-  <script src="script/main.js"></script>
+  <div id="form-section">
+    <form action="" id="insert-form" autocomplete="off" method="get">
+      <button  class="close-btn">&times;</button>
+      <h1 class="title-form">Insert Employee Records</h1>
+      <input
+        type="text"
+        name="name"
+        placeholder="Enter name"
+        class="input-form"
+        id="name"
+      />
+      <br />
+      <input
+        type="text"
+        name="sirname"
+        placeholder="Enter Sirname"
+        class="input-form"
+        id="sirname"
+      />
+      <br />
+      <input
+        type="email"
+        name="mail"
+        placeholder="Enter Email"
+        class="input-form"
+        id="email"
+      />
+      <br />
+      <input
+        type="text"
+        name="phone"
+        placeholder="Enter Phone"
+        class="input-form"
+        id="phone"
+      /><br />
+      <input
+        type="text"
+        name="salary"
+        placeholder="Enter Salary"
+        class="input-form"
+        id="salary"
+      />
+      <br />
+      <button type="submit" name="submit" class="insert-btn">
+        Insert Record
+      </button>
+    </form>
+  </div>
+  <script type="module" src="script/main.js"></script>
+  <!-- <script src="script/views/form-insert.view.js"></script> -->
 </body>
 </html>

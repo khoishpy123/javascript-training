@@ -1,18 +1,42 @@
-.form-section{
-  display: flex;
+#form-section{
+  display: none;
   align-items: center;
   height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background:rgba(0, 0, 0, 0.4);
 }
+
+#form-section.open{
+  display: flex;
+}
+
 #insert-form{
+  position: relative;
   border: 1px solid black;
   text-align: center;
   width: 40%;
   margin: 0 auto;
   padding: 20px 0;
+  background-color: #fff;
 }
+
+.close-btn{
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  opacity: 0.8;
+  font-size: 30px;
+  border: none;
+  background-color: #fff;
+}
+
 .title-form{
   font-size: 30px;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   margin-bottom: 20px;
 }
