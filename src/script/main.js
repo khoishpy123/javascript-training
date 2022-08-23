@@ -1,6 +1,11 @@
-import showFormInsert from "./controllers/home.controller.js";
+import Views from "./views/form-insert.view.js";
+// import showFormInsert from "./controllers/home.controller.js";
 
-showFormInsert();
+
+const view = new Views();
+
+view.bindOpenFormInsert();
+// showFormInsert();
 
 // const listAPI = "http://localhost:3000/employee";
 
