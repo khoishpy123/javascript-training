@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "format": "prettier --double-quote --trailing-comma all --write src/**/*.js",
+    "format": "prettier --double-quote --trailing-comma all --tab-width 2 --write src/**/*.js",
     "server": "json-server --watch data.json",
     "start": "concurrently --kill-others \"npm run server\" \"npm run dev\"",
     "test": "echo \"Error: no test specified\" && exit 1",

@@ -37,7 +37,7 @@
     </table>
   </main>
   <div id="form-section">
-    <form action="" id="insert-form" autocomplete="off" method="get">
+    <form id="insert-form" autocomplete="off" method="post">
       <button  class="close-btn">&times;</button>
       <h1 class="title-form">Insert Employee Records</h1>
       <input
@@ -47,6 +47,7 @@
         class="input-form"
         id="name"
       />
+      <span id="name-empty"></span>
       <br />
       <input
         type="text"
@@ -55,6 +56,7 @@
         class="input-form"
         id="sirname"
       />
+      <span id="sirname-empty"></span>
       <br />
       <input
         type="email"
@@ -63,6 +65,7 @@
         class="input-form"
         id="email"
       />
+      <span id="email-empty"></span>
       <br />
       <input
         type="text"
@@ -70,7 +73,9 @@
         placeholder="Enter Phone"
         class="input-form"
         id="phone"
-      /><br />
+      />
+      <span id="phone-empty"></span>
+      <br />
       <input
         type="text"
         name="salary"
@@ -78,6 +83,7 @@
         class="input-form"
         id="salary"
       />
+      <span id="salary-empty"></span>
       <br />
       <button type="submit" name="submit" class="insert-btn">
         Insert Record
