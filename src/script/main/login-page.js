@@ -5,4 +5,5 @@ import LoginView from "../views/login.js";
 
 const loginModel = new LoginModel();
 const loginView = new LoginView();
+// eslint-disable-next-line no-unused-vars
 const loginController = new LoginController(loginModel, loginView);

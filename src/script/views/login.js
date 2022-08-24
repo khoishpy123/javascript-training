@@ -15,7 +15,7 @@ class LoginView {
 
           if (item.username === username && item.password === password) {
             alert("dang nhap thanh cong");
-            // window.location.href = "./index.html";
+            window.location.href = "./index.html";
           }
         });
         
