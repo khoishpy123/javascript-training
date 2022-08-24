@@ -3,10 +3,7 @@
 class LoginView {
   constructor() {
     this.btnLogin = document.querySelector(".btn");
-    //* Selector button id='submit'
   }
-
-
 
   bindUser(getUser) {
     getUser().then((user) => {
