@@ -1,4 +1,3 @@
-// import redirect from "../constants/api";
 
 class LoginView {
   constructor() {

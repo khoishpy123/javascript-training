@@ -15,43 +15,6 @@ async function request(url) {
   return result;
 }
 
-  // if (id) {
-  //   if (method === "GET") {
-  //     url += "?" + objectToQueryString(id);
-  //   } else {
-  //     options.body = JSON.stringify(id);
-  //   }
-  // }
-
-  // if (response.status !== 200) {
-  //   return generateErrorResponse(
-  //     "The server responded with an unexpected status.",
-  //   );
-  // }
-
-// /**
-//  *
-//  * @param {object} obj
-//  * @returns object
-//  */
-// function objectToQueryString(obj) {
-//   return Object.keys(obj)
-//     .map((key) => key + "=" + obj[key])
-//     .join("&");
-// }
-
-/**
- *
- * @param {string} message
- * @returns string
- */
-// function generateErrorResponse(message) {
-//   return {
-//     status: "error",
-//     message,
-//   };
-// }
-
 /**
  * Use url and id to return result request to read data
  * @param {string} url
