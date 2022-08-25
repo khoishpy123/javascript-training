@@ -16,5 +16,23 @@
       "password": "1234589"
     }
 
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Khoi",
+      "surname": "Minh",
+      "email": "minkhoi@gmail.com",
+      "phone": "0345687125",
+      "salary": "1000"
+    },
+    {
+      "id": 2,
+      "name": "Tuan",
+      "surname": "Le",
+      "email": "tuanle@gmail.com",
+      "phone": "0326526259",
+      "salary": "100"
+    }
   ]
 }
