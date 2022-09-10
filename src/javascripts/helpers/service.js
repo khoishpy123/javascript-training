@@ -1,4 +1,4 @@
-import api from "../../constant.js";
+import api from "../constant.js";
 
 async function request(url) {
   const options = {

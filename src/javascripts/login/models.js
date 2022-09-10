@@ -1,5 +1,5 @@
 import path from "../constant.js";
-import fetch from "../users/helpers/service.js";
+import fetch from "../helpers/service.js";
 
 class LoginModel {
   constructor() {}
