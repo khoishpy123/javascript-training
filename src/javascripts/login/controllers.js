@@ -18,7 +18,7 @@ class LoginController {
   }
 
   async handleCheckUser(username, password) {
-    const users = await this.loginModel.getUsers();
+    const users = await this.loginModel.getDataOfUser();
     let loginNow;
     users.find((item) => {
       if (item.username === username && item.password === password) {

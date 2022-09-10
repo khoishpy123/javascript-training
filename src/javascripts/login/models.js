@@ -5,11 +5,11 @@ class LoginModel {
   constructor() {}
 
   /**
-   * Use API url from fetch import in read data
+   * Call API from the helper to get all users
    * @returns {array} user
    */
-  async getUsers() {
-    const data = await fetch.get(`/${path.PATH_USER}`);
+  async getDataOfUser() {
+    const data = await fetch.getRequest(`/${path.PATH_USER}`);
 
     return data;
   }
