@@ -21,7 +21,6 @@ class LoginController {
     const users = await this.loginModel.getUsers();
     let loginNow;
     users.find((item) => {
-      console.log(item);
       if (item.username === username && item.password === password) {
         loginNow = true;
         return loginNow;
