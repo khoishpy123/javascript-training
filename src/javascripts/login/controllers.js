@@ -6,7 +6,7 @@ class LoginController {
     this.btnLogin = document.getElementById("submit");
     this.getUserPass();
   }
-  
+
   getUserPass() {
     this.btnLogin.addEventListener("click", (e) => {
       e.preventDefault();
