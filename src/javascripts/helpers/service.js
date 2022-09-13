@@ -30,26 +30,26 @@ function getRequest(url) {
 }
 
 /**
-   * Use url to delete data by DETELE method
-   * @param {string} url 
-   */
-function deleteRequest(url){
+ * Use url to delete data by DETELE method
+ * @param {string} url
+ */
+function deleteRequest(url) {
   return request(url, "DELETE");
 }
 
 /**
-   * Use url and body to send data to server by POST method
-   * @param {string} url 
-   */
-function createRequest(url, body){
+ * Use url and body to send data to server by POST method
+ * @param {string} url
+ */
+function createRequest(url, body) {
   return request(url, "POST", body);
 }
 
 /**
-   * Use url and body to send data to a server to update a resource by PUT method
-   * @param {string} url 
-   */
-function updateRequest(url, body){
+ * Use url and body to send data to a server to update a resource by PUT method
+ * @param {string} url
+ */
+function updateRequest(url, body) {
   return request(url, "PUT", body);
 }
 
