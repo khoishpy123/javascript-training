@@ -1,6 +1,7 @@
 class View {
   constructor() {
     this.employeeList = document.getElementById("employee-list");
+    this.addBtn = document.getElementById("add-btn");
   }
   displayEmployees(employees) {
     let employeeTemplate = "";
@@ -23,6 +24,8 @@ class View {
       });
     }
   }
+
+  
 }
 
 export default View;
