@@ -1,5 +1,4 @@
-#form-section{
-  display: none;
+.employee-popup{
   align-items: center;
   height: 100%;
   position: fixed;
@@ -8,18 +7,15 @@
   left: 0;
   bottom: 0;
   background:rgba(0, 0, 0, 0.4);
+  visibility: hidden;
 }
 
-#form-section.open{
-  display: flex;
-}
-
-#insert-form{
+.insert-popup{
   position: relative;
   border: 1px solid black;
   text-align: center;
-  width: 40%;
-  margin: 0 auto;
+  width: 450px;
+  margin: 10% auto ;
   padding: 20px 0;
   background-color: #fff;
 }
@@ -35,7 +31,7 @@
   background-color: #fff;
 }
 
-.title-form{
+#form-title{
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;

@@ -19,7 +19,7 @@
   </header>
   <main class="main-content">
     <h1 class="main-title">View Records</h1>
-    <button id="add-btn" class="add-btn">Add employee</button>
+    <button id="add-btn" type="button" class="add-btn">Add employee</button>
     <table>
       <thead>
         <tr>
@@ -36,6 +36,54 @@
       </tbody>
     </table>
   </main>
+  <div id="employee-popup" class="employee-popup">
+    <form action="" id="insert-form" class="insert-popup" autocomplete="off" method="get">
+      <button type="button" id="close-btn" class="close-btn">&times;</button>
+      <h1 id="form-title">Insert Employee Records</h1>
+      <input
+        type="text"
+        name="name"
+        placeholder="Enter name"
+        class="input-form"
+        id="name"
+      />
+      <br />
+      <input
+        type="text"
+        name="sirname"
+        placeholder="Enter Sirname"
+        class="input-form"
+        id="sirname"
+      />
+      <br />
+      <input
+        type="email"
+        name="mail"
+        placeholder="Enter Email"
+        class="input-form"
+        id="email"
+      />
+      <br />
+      <input
+        type="text"
+        name="phone"
+        placeholder="Enter Phone"
+        class="input-form"
+        id="phone"
+      /><br />
+      <input
+        type="text"
+        name="salary"
+        placeholder="Enter Salary"
+        class="input-form"
+        id="salary"
+      />
+      <br />
+      <button type="button" name="submit" class="insert-btn">
+        Insert Record
+      </button>
+    </form>
+  </div>
   <script type="module" src="./javascripts/main/home-main.js"></script>
 </body>
 </html>
