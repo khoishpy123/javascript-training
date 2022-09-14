@@ -6,16 +6,17 @@ class View {
     this.addBtn = document.querySelector(".add-btn");
     this.formTitle = document.getElementById("form-title");
     this.employeeName = document.getElementById("name");
-    this.employeeSirname = document.getElementById("sirname");
+    this.employeeSurname = document.getElementById("sirname");
     this.employeeEmail = document.getElementById("email");
     this.employeePhone = document.getElementById("phone");
     this.employeeSalary = document.getElementById("salary");
+    this.submitBtn = document.getElementById("submit-btn");
   }
 
   reserInput = () => {
     this.formTitle.textContent = "Insert Employee Records";
     this.employeeName.value = "";
-    this.employeeSirname.value = "";
+    this.employeeSurname.value = "";
     this.employeeEmail.value = "";
     this.employeePhone.value = "";
     this.employeeSalary.value = "";
@@ -26,7 +27,7 @@ class View {
       // change value of form
       this.formTitle.textContent = "EDIT EMPLOYEE";
       this.employeeName.value = employee.name;
-      this.employeeSirname.value = employee.surname;
+      this.employeeSurname.value = employee.surname;
       this.employeeEmail.value = employee.email;
       this.employeePhone.value = employee.phone;
       this.employeeSalary.value = employee.salary;
@@ -41,11 +42,13 @@ class View {
 
   displayEmployees = (employees) => {
     let employeeTemplate = "";
+    let count = 0;
     if (employees.length) {
       employees.forEach((employee) => {
+        count += 1;
         employeeTemplate += `
         <tr id="${employee.id}">
-          <td class="employee-id" name="employeeId">${employee.id}</td>
+          <td>${count}</td>
           <td class="employee-name" name="employeeName">${employee.name}</td>
           <td class="employee-surname" name="employeeSurname">${employee.surname}</td>
           <td class="employee-email" name="employeeEmail">${employee.email}</td>
@@ -84,6 +87,46 @@ class View {
       }
     );
   };
+
+  bindValidateForm(handel){
+    this.submitBtn.addEventListener("click", (e)=>{
+      e.preventDefault();
+      if(this.employeeName.value == ""){
+        alert("Please enter your employee name !!");
+      }
+      if(this.employeeSurname.value == ""){
+        alert("Please enter your employee surname !!");
+      }
+      if(this.employeeEmail.value == ""){
+        alert("Please enter your employee email !!");
+      }
+      if(this.employeePhone.value == ""){ 
+        alert("Please enter your employee phone !!");
+      }
+      if(this.employeeSalary.value == ""){
+        alert("Please enter your employee salary !!");
+      }
+      if(
+        this.employeeName.value &&
+        this.employeeSurname.value &&
+        this.employeeEmail.value && 
+        this.employeePhone.value &&
+        this.employeeSalary.value
+      ){
+        const body = {
+          name: this.employeeName.value,
+          surname: this.employeeSurname.value,
+          email: this.employeeEmail.value,
+          phone: this.employeePhone.value,
+          salary: this.employeeSalary.value
+        };
+        handel(body);
+        this.closeEmployeeModal;
+      }else{
+        alert("Please enter all before create a new employee!!!");
+      }
+    });
+  }
 }
 
 export default View;

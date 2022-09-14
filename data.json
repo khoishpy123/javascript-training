@@ -15,11 +15,10 @@
       "username": "long1236",
       "password": "1234589"
     }
-
   ],
   "employees": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Khoi",
       "surname": "Minh",
       "email": "minkhoi@gmail.com",
@@ -27,12 +26,34 @@
       "salary": "1000"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Tuan",
       "surname": "Le",
       "email": "tuanle@gmail.com",
       "phone": "0326526259",
       "salary": "100"
+    },
+    {
+      "name": "Huy",
+      "email": "QuocHUY@gmail.com",
+      "phone": "3265423659",
+      "salary": "5000",
+      "id": "GtYeWMc"
+    },
+    {
+      "name": "Long",
+      "email": "dailong@gmail.com",
+      "phone": "0325623546",
+      "salary": "1000",
+      "id": "wMZJUWT"
+    },
+    {
+      "name": "Khanh",
+      "surname": "Van",
+      "email": "khanhvan@gmail.com",
+      "phone": "0235623569",
+      "salary": "5000",
+      "id": "H24fH2z"
     }
   ]
 }
