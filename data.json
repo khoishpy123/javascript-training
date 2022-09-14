@@ -54,6 +54,14 @@
       "phone": "0235623569",
       "salary": "5000",
       "id": "H24fH2z"
+    },
+    {
+      "name": "Minh",
+      "surname": "Nguyen",
+      "email": "minhnguyen@gmail.com",
+      "phone": "0325623541",
+      "salary": "3000",
+      "id": "rCKXMk-"
     }
   ]
 }
