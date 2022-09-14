@@ -27,11 +27,7 @@ class Controller {
   };
 
   async handleAddNewEmployee(body){
-    try {
       await this.Model.addnewEmployee(body);
-    } catch (error) {
-      alert("Error adding employee!!!");
-    }
   }
 }
 
