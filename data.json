@@ -18,34 +18,12 @@
   ],
   "employees": [
     {
-      "id": "1",
-      "name": "Khoi",
-      "surname": "Minh",
-      "email": "minkhoi@gmail.com",
-      "phone": "0345687125",
-      "salary": "1000"
-    },
-    {
       "id": "2",
       "name": "Tuan",
       "surname": "Le",
       "email": "tuanle@gmail.com",
       "phone": "0326526259",
       "salary": "100"
-    },
-    {
-      "name": "Huy",
-      "email": "QuocHUY@gmail.com",
-      "phone": "3265423659",
-      "salary": "5000",
-      "id": "GtYeWMc"
-    },
-    {
-      "name": "Long",
-      "email": "dailong@gmail.com",
-      "phone": "0325623546",
-      "salary": "1000",
-      "id": "wMZJUWT"
     },
     {
       "name": "Khanh",
@@ -62,6 +40,22 @@
       "phone": "0325623541",
       "salary": "3000",
       "id": "rCKXMk-"
+    },
+    {
+      "name": "Hai",
+      "surname": "Hau",
+      "email": "haihau@gmail.com",
+      "phone": "0235623569",
+      "salary": "10000",
+      "id": "byz6LUM"
+    },
+    {
+      "name": "Khoi",
+      "surname": "Minh",
+      "email": "minhkhoi@gmail.com",
+      "phone": "0132653659",
+      "salary": "100000",
+      "id": "LIqQnl4"
     }
   ]
 }

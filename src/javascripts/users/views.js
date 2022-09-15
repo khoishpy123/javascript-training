@@ -11,6 +11,9 @@ class View {
     this.employeePhone = document.getElementById("phone");
     this.employeeSalary = document.getElementById("salary");
     this.submitBtn = document.getElementById("submit-btn");
+    this.delBtn = document.getElementById("confirmDelete-btn");
+    this.employeePopUpDel = document.getElementById("delete-popup");
+    this.cancelBtn = document.getElementById("cancelDel-btn");
   }
 
   reserInput = () => {
@@ -38,6 +41,14 @@ class View {
   closeEmployeeModal = () => {
     this.employeeModal.style.visibility = "hidden";
     this.reserInput();
+  };
+
+  openEmployeeModalDel = () => {
+    this.employeePopUpDel.style.visibility = "visible";
+  };
+
+  closeEmployeeModalDel = () => {
+    this.employeePopUpDel.style.visibility = "hidden";
   };
 
   displayEmployees = (employees) => {
@@ -76,12 +87,10 @@ class View {
     });
   };
 
-  bindEditEmployeeModal = (renderEmployeeModal) => {
+  bindShowEmployeeModalDel = () => {
     this.employeeList.addEventListener("click", (e) => {
-      if (e.target.className === "btn-edit") {
-        const id = e.target.parentElement.parentElement.id;
-        const employee = renderEmployeeModal(id);
-        this.openEmployeeModal(employee);
+        if(e.target.className === "btn-del"){
+        this.openEmployeeModalDel();
       }
     });
   };
@@ -110,18 +119,49 @@ class View {
         this.employeeEmail.value &&
         this.employeePhone.value &&
         this.employeeSalary.value
-      ) {
-        const body = {
-          name: this.employeeName.value,
-          surname: this.employeeSurname.value,
-          email: this.employeeEmail.value,
-          phone: this.employeePhone.value,
-          salary: this.employeeSalary.value,
-        };
-        handel(body);
-        this.closeEmployeeModal;
-      } else {
-        alert("Please enter all before create a new employee!!!");
+        ) {
+          const body = {
+            name: this.employeeName.value,
+            surname: this.employeeSurname.value,
+            email: this.employeeEmail.value,
+            phone: this.employeePhone.value,
+            salary: this.employeeSalary.value,
+          };
+          handel(body);
+          this.closeEmployeeModal;
+        } else {
+          alert("Please enter all before create a new employee!!!");
+        }
+      });
+    };
+    bindEditEmployeeModal = (renderEmployeeModal) => {
+      this.employeeList.addEventListener("click", (e) => {
+        if (e.target.className === "btn-edit") {
+          const id = e.target.parentElement.parentElement.id;
+          const employee = renderEmployeeModal(id);
+          this.openEmployeeModal(employee);
+        }
+      });
+    };
+    
+    /**
+   * function use id to delete course
+   * Add event 'click' for courseList element
+   * Add event 'click' for delete button
+   * @param {function} handlerDeleteCourse
+   */
+  bindDeleteEmployee = (handlerDeleteEmployee) => {
+    this.employeeList.addEventListener("click", (e) =>{
+      let check = 0;
+      if(e.target.className === "btn-del"){
+        this.delBtn.addEventListener("click", () =>{
+          if(check == 0){
+            const id = e.target.parentElement.parentElement.id;
+            handlerDeleteEmployee(id);
+            this.closeEmployeeModal();
+            check++;
+          }
+        });
       }
     });
   };

@@ -5,11 +5,6 @@ class Model {
     this.employees = [];
   }
 
-  /**
-   * Use API url from fetch import in read data
-   * @returns {array} employees
-   */
-
   getEmployees = async () => {
     this.employees = await fetch.getRequest(`/${path.PATH_EMPLOYEE}`);
     return this.employees;
@@ -33,6 +28,16 @@ class Model {
     this.employees.push(employee);
     return employee;
   };
+
+  deleteEmployee = async (id) => {
+    const employee = await fetch.deleteRequest(`/${path.PATH_EMPLOYEE}/${id}`);
+    console.log(employee);
+    const index = this.employees.findIndex((item) => item.id === employee.id);
+    this.employees.splice(index, 1);
+    return employee;
+  };
+
+
 }
 
 export default Model;

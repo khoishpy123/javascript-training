@@ -9,8 +9,10 @@ class Controller {
     this.handelShowEmployee();
     this.View.bindShowEmployeeModal();
     this.View.bindCloseEmployeeModal();
+    this.View.bindShowEmployeeModalDel();
     this.View.bindEditEmployeeModal(this.getEmployeeById);
     this.View.bindValidateForm(this.handleAddNewEmployee.bind(this));
+    this.View.bindDeleteEmployee(this.handleDeleteEmployee.bind(this));
   }
 
   handelShowEmployee = async () => {
@@ -18,9 +20,9 @@ class Controller {
     this.View.displayEmployees(employeesList);
   };
 
-  onEmployeeListChanged = (employees) => {
-    this.View.displayEmployees(employees);
-  };
+  // onEmployeeListChanged = (employees) => {
+  //   this.View.displayEmployees(employees);
+  // };
 
   getEmployeeById = (id) => {
     return this.Model.getEmployeeById(id);
@@ -28,6 +30,10 @@ class Controller {
 
   handleAddNewEmployee = async (body) => {
     await this.Model.addnewEmployee(body);
+  };
+
+  handleDeleteEmployee = async (id) => {
+    await this.Model.deleteEmployee(id);
   };
 }
 
