@@ -22,8 +22,8 @@ class View {
     this.employeeSalary.value = "";
   };
 
-  openEmployeeModal = (employee) =>{
-    if(employee){
+  openEmployeeModal = (employee) => {
+    if (employee) {
       // change value of form
       this.formTitle.textContent = "EDIT EMPLOYEE";
       this.employeeName.value = employee.name;
@@ -67,66 +67,64 @@ class View {
   bindShowEmployeeModal = () => {
     this.addBtn.addEventListener("click", () => {
       this.openEmployeeModal();
-    }
-  );};
+    });
+  };
 
   bindCloseEmployeeModal = () => {
     this.closeBtn.addEventListener("click", () => {
       this.closeEmployeeModal();
-    }
-  );
-};
+    });
+  };
 
   bindEditEmployeeModal = (renderEmployeeModal) => {
     this.employeeList.addEventListener("click", (e) => {
-      if(e.target.className === "btn-edit"){
+      if (e.target.className === "btn-edit") {
         const id = e.target.parentElement.parentElement.id;
         const employee = renderEmployeeModal(id);
         this.openEmployeeModal(employee);
       }
-      }
-    );
+    });
   };
 
-  bindValidateForm(handel){
-    this.submitBtn.addEventListener("click", (e)=>{
+  bindValidateForm = (handel) => {
+    this.submitBtn.addEventListener("click", (e) => {
       e.preventDefault();
-      if(this.employeeName.value == ""){
+      if (this.employeeName.value == "") {
         alert("Please enter your employee name !!");
       }
-      if(this.employeeSurname.value == ""){
+      if (this.employeeSurname.value == "") {
         alert("Please enter your employee surname !!");
       }
-      if(this.employeeEmail.value == ""){
+      if (this.employeeEmail.value == "") {
         alert("Please enter your employee email !!");
       }
-      if(this.employeePhone.value == ""){ 
+      if (this.employeePhone.value == "") {
         alert("Please enter your employee phone !!");
       }
-      if(this.employeeSalary.value == ""){
+      if (this.employeeSalary.value == "") {
         alert("Please enter your employee salary !!");
       }
-      if(
+      if (
         this.employeeName.value &&
         this.employeeSurname.value &&
-        this.employeeEmail.value && 
+        this.employeeEmail.value &&
         this.employeePhone.value &&
         this.employeeSalary.value
-      ){
+      ) {
         const body = {
           name: this.employeeName.value,
           surname: this.employeeSurname.value,
           email: this.employeeEmail.value,
           phone: this.employeePhone.value,
-          salary: this.employeeSalary.value
+          salary: this.employeeSalary.value,
         };
         handel(body);
         this.closeEmployeeModal;
-      }else{
+      } else {
         alert("Please enter all before create a new employee!!!");
       }
     });
-  }
+  };
 }
 
 export default View;

@@ -29,7 +29,7 @@ class Model {
       phone: data.phone,
       salary: data.salary,
     };
-    const employee = await fetch.createRequest(`/${path.PATH_EMPLOYEE}`,body);
+    const employee = await fetch.createRequest(`/${path.PATH_EMPLOYEE}`, body);
     this.employees.push(employee);
     return employee;
   };

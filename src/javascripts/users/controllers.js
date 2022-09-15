@@ -13,10 +13,10 @@ class Controller {
     this.View.bindValidateForm(this.handleAddNewEmployee.bind(this));
   }
 
-  async handelShowEmployee() {
+  handelShowEmployee = async () => {
     const employeesList = await this.Model.getEmployees();
     this.View.displayEmployees(employeesList);
-  }
+  };
 
   onEmployeeListChanged = (employees) => {
     this.View.displayEmployees(employees);
@@ -26,9 +26,9 @@ class Controller {
     return this.Model.getEmployeeById(id);
   };
 
-  async handleAddNewEmployee(body){
-      await this.Model.addnewEmployee(body);
-  }
+  handleAddNewEmployee = async (body) => {
+    await this.Model.addnewEmployee(body);
+  };
 }
 
 export default Controller;
