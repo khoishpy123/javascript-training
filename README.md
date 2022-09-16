@@ -68,7 +68,7 @@ open file index.html
 ```
 
 ```
-click on right mouse buttons to Open with live server or
+click on right mouse buttons to Open with live server
 ```
 
 ## Author
