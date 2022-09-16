@@ -14,11 +14,12 @@ table{
 }
 
 td, th{
-  border: 1px solid #dddddd;
+  border: 1px solid #9e9e9e75;
   text-align: center;
   padding: 8px;
 }
 
+thead,
 tr:nth-child(even){
   background-color: #dddddd;
 }
