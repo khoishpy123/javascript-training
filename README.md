@@ -7,7 +7,7 @@
 ## Technical
 
 - HTML5
-- CSS3
+- CSS
 - Javascript
 - DOM
 - MVC
@@ -25,30 +25,24 @@
 
 ## Timeline
 
-- Estimate time: 7 days
+- Estimate time: 9 days
 
 ## Design
 
-- [Figma](https://www.figma.com/file/vvPw8UG7QVPG46FgsCMc1s/Course-Management)
+- [Figma](link)
 
 ## Getting started
 
 - Clone repository
 
 ```
-git clone https://github.com/ThaoLyyy/javascript-training
+git clone https://github.com/khoishpy123/javascript-training
 ```
 
-- Checkout branch `develop`
+- Checkout branch `feature/add-delete-update-employee`
 
 ```
-git checkout develop
-```
-
-- Change directory to `big-practice` folder
-
-```
-cd big_practice
+git checkout feature/add-delete-update-employee
 ```
 
 - Open cmd and install package

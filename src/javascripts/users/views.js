@@ -136,7 +136,7 @@ class View {
           phone: this.employeePhone.value,
           salary: this.employeeSalary.value,
         };
-        handel(id,body);
+        handel(id, body);
         this.closeEmployeeModal;
       } else {
         alert("Please enter all before create a new employee!!!");

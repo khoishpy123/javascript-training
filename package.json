@@ -8,8 +8,7 @@
     "server": "json-server --watch data.json",
     "start": "concurrently --kill-others \"npm run server\" \"npm run dev\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint src/**/*.js",
-    "fix": "eslint --fix src/**/*.js"
+    "lint": "eslint src/**/*.js"
   },
   "repository": {
     "type": "git",

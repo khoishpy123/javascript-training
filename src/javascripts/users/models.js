@@ -37,7 +37,7 @@ class Model {
   };
 
   updateEmployee = async (id, data) => {
-    const body  = {
+    const body = {
       id: data.id,
       name: data.name,
       surname: data.surname,
@@ -45,7 +45,10 @@ class Model {
       phone: data.phone,
       salary: data.salary,
     };
-    const employee = await fetch.updateRequest(`/${path.PATH_EMPLOYEE}/${id}`,body );
+    const employee = await fetch.updateRequest(
+      `/${path.PATH_EMPLOYEE}/${id}`,
+      body,
+    );
     const index = this.employees.findIndex((item) => item.id === id);
     this.employees.splice(index, 1, employee);
     return employee;
