@@ -2,7 +2,7 @@
 
 ## Overview
 
-- Create an application with Javascript
+- Create an web with Javascript
 
 ## Technical
 
