@@ -18,16 +18,8 @@
   ],
   "employees": [
     {
-      "id": "2",
-      "name": "Tuan",
-      "surname": "Le",
-      "email": "tuanle@gmail.com",
-      "phone": "0326526259",
-      "salary": "100"
-    },
-    {
       "name": "Khanh",
-      "surname": "Van",
+      "surname": "Va",
       "email": "khanhvan@gmail.com",
       "phone": "0235623569",
       "salary": "5000",
@@ -56,6 +48,22 @@
       "phone": "0132653659",
       "salary": "100000",
       "id": "LIqQnl4"
+    },
+    {
+      "name": "duong",
+      "surname": "nguyen",
+      "email": "duongnuyen@gmail.com",
+      "phone": "0235623651",
+      "salary": "100000",
+      "id": "qbC_JqJ"
+    },
+    {
+      "name": "tin",
+      "surname": "nguyen",
+      "email": "tinnguyen@gmail.com",
+      "phone": "01326523659",
+      "salary": "12000",
+      "id": "brT76ZW"
     }
   ]
 }

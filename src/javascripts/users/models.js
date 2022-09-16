@@ -31,13 +31,25 @@ class Model {
 
   deleteEmployee = async (id) => {
     const employee = await fetch.deleteRequest(`/${path.PATH_EMPLOYEE}/${id}`);
-    console.log(employee);
     const index = this.employees.findIndex((item) => item.id === employee.id);
     this.employees.splice(index, 1);
     return employee;
   };
 
-
+  updateEmployee = async (id, data) => {
+    const body  = {
+      id: data.id,
+      name: data.name,
+      surname: data.surname,
+      email: data.email,
+      phone: data.phone,
+      salary: data.salary,
+    };
+    const employee = await fetch.updateRequest(`/${path.PATH_EMPLOYEE}/${id}`,body );
+    const index = this.employees.findIndex((item) => item.id === id);
+    this.employees.splice(index, 1, employee);
+    return employee;
+  };
 }
 
 export default Model;

@@ -14,6 +14,7 @@ class View {
     this.delBtn = document.getElementById("confirmDelete-btn");
     this.employeePopUpDel = document.getElementById("delete-popup");
     this.cancelBtn = document.getElementById("cancelDel-btn");
+    this.employeeId = document.getElementById("employee-id");
   }
 
   reserInput = () => {
@@ -34,6 +35,7 @@ class View {
       this.employeeEmail.value = employee.email;
       this.employeePhone.value = employee.phone;
       this.employeeSalary.value = employee.salary;
+      this.employeeId.value = employee.id;
     }
     this.employeeModal.style.visibility = "visible";
   };
@@ -89,9 +91,15 @@ class View {
 
   bindShowEmployeeModalDel = () => {
     this.employeeList.addEventListener("click", (e) => {
-        if(e.target.className === "btn-del"){
+      if (e.target.className === "btn-del") {
         this.openEmployeeModalDel();
       }
+    });
+  };
+
+  bindCloseEmployeeModalDel = () => {
+    this.cancelBtn.addEventListener("click", () => {
+      this.closeEmployeeModalDel();
     });
   };
 
@@ -119,43 +127,39 @@ class View {
         this.employeeEmail.value &&
         this.employeePhone.value &&
         this.employeeSalary.value
-        ) {
-          const body = {
-            name: this.employeeName.value,
-            surname: this.employeeSurname.value,
-            email: this.employeeEmail.value,
-            phone: this.employeePhone.value,
-            salary: this.employeeSalary.value,
-          };
-          handel(body);
-          this.closeEmployeeModal;
-        } else {
-          alert("Please enter all before create a new employee!!!");
-        }
-      });
-    };
-    bindEditEmployeeModal = (renderEmployeeModal) => {
-      this.employeeList.addEventListener("click", (e) => {
-        if (e.target.className === "btn-edit") {
-          const id = e.target.parentElement.parentElement.id;
-          const employee = renderEmployeeModal(id);
-          this.openEmployeeModal(employee);
-        }
-      });
-    };
-    
-    /**
-   * function use id to delete course
-   * Add event 'click' for courseList element
-   * Add event 'click' for delete button
-   * @param {function} handlerDeleteCourse
-   */
+      ) {
+        const id = this.employeeId.value;
+        const body = {
+          name: this.employeeName.value,
+          surname: this.employeeSurname.value,
+          email: this.employeeEmail.value,
+          phone: this.employeePhone.value,
+          salary: this.employeeSalary.value,
+        };
+        handel(id,body);
+        this.closeEmployeeModal;
+      } else {
+        alert("Please enter all before create a new employee!!!");
+      }
+    });
+  };
+
+  bindEditEmployeeModal = (renderEmployeeModal) => {
+    this.employeeList.addEventListener("click", (e) => {
+      if (e.target.className === "btn-edit") {
+        const id = e.target.parentElement.parentElement.id;
+        const employee = renderEmployeeModal(id);
+        this.openEmployeeModal(employee);
+      }
+    });
+  };
+
   bindDeleteEmployee = (handlerDeleteEmployee) => {
-    this.employeeList.addEventListener("click", (e) =>{
+    this.employeeList.addEventListener("click", (e) => {
       let check = 0;
-      if(e.target.className === "btn-del"){
-        this.delBtn.addEventListener("click", () =>{
-          if(check == 0){
+      if (e.target.className === "btn-del") {
+        this.delBtn.addEventListener("click", () => {
+          if (check == 0) {
             const id = e.target.parentElement.parentElement.id;
             handlerDeleteEmployee(id);
             this.closeEmployeeModal();
@@ -166,5 +170,4 @@ class View {
     });
   };
 }
-
 export default View;
