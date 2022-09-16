@@ -25,7 +25,7 @@
 
 ## Timeline
 
-- Estimate time: 9 days
+- Estimate time: 8 days
 
 ## Design
 
