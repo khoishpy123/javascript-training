@@ -51,29 +51,27 @@ git checkout feature/add-delete-update-employee
 npm install
 ```
 
-- Run application
-
-```
-npm start
-```
-
 - Run server
 
 ```
 npm run dev
 ```
 
-- Open browser with the link below
+- Run web
 
 ```
-http://localhost:1234
+install live server extension
 ```
 
-## WEBSITE
+```
+open file index.html
+```
 
-[Link](https://thaoly-practice-courselist.herokuapp.com/)
+```
+click on right mouse buttons to Open with live server or
+```
 
 ## Author
 
-- Thao Ly
-- Email: thaolydn1805@gmail.com
+- Minh Khoi
+- Email: minhkhoidoan234@gmail.com
