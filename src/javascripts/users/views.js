@@ -1,7 +1,7 @@
 class View {
   constructor() {
     this.employeeList = document.getElementById("employee-list");
-    this.employeeModal = document.getElementById("employee-popup");
+    this.employeeModal = document.getElementById("modal-employee");
     this.closeBtn = document.getElementById("close-btn");
     this.addBtn = document.querySelector(".add-btn");
     this.formTitle = document.getElementById("form-title");
